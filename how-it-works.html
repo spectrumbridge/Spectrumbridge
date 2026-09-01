@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works — Spectrum Bridge</title>
+<meta name="description" content="How Spectrum Bridge works — from getting in touch to ongoing support.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/nav-icon.png" alt="Spectrum Bridge">
+      <span>Spectrum Bridge</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="how-it-works.html" class="current">How It Works</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary btn-small nav-cta">Get in Touch</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span>
+    </button>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="container">
+      <h1>How Spectrum Bridge works</h1>
+      <p class="lede" style="margin-top: 18px;">A simple, direct process — no forms to fill in on this site, just a real conversation with our team.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-num">01</div>
+          <div>
+            <h3>Learn about Spectrum Bridge</h3>
+            <p>Read through our site to understand who we are, who we serve, and the areas we connect people to — from employment to protection and beyond.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">02</div>
+          <div>
+            <h3>Get in touch</h3>
+            <p>Reach out to our team directly using the contact details on our Contact page. You don't need to share sensitive details in your first message.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">03</div>
+          <div>
+            <h3>Share your circumstances</h3>
+            <p>Once we've responded, you can share more about your situation, interests, skills and experience so our team can understand how best to help.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">04</div>
+          <div>
+            <h3>Review and discussion</h3>
+            <p>Our team reviews what you've shared and discusses relevant pathways and next steps with you directly.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">05</div>
+          <div>
+            <h3>Ongoing contact</h3>
+            <p>If a relevant possibility is identified, we'll stay in touch with you about eligibility and the next steps involved.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="button-row">
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        <a href="faq.html" class="btn btn-secondary">Read the FAQs</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <a href="index.html" class="footer-brand">
+        <img src="assets/nav-icon.png" alt="Spectrum Bridge">
+        <span>Spectrum Bridge</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <p class="footer-note">Spectrum Bridge — Global LGBTQ+ Network. This site shares information only; no personal details are collected here.</p>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+</script>
+</body>
+</html>
