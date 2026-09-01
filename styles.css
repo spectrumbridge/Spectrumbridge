@@ -49,19 +49,19 @@ p { margin: 0 0 1rem; color: var(--ink-soft); max-width: 62ch; }
 p:last-child { margin-bottom: 0; }
 
 /* Utility text color classes pulling from the logo-inspired palette */
-.text-purple { color: var(--purple); }
+.text-purple { color: var(--accent); }
 .text-accent { color: var(--accent); }
 .text-coral { color: var(--coral); }
 
 /* Slightly stronger heading-like styling for lead paragraphs when you want emphasis */
-.lead-accent { color: var(--purple); }
+.lead-accent { color: var(--accent); }
 
 /* Alternate callout that uses the Telegram accent color */
 .callout.accent { border-left-color: var(--accent); }
 .callout.accent p { color: var(--accent); }
 
 /* Muted but branded paragraph style for section intros */
-.section-head .muted-accent { color: var(--purple); opacity: 0.95; }
+.section-head .muted-accent { color: var(--accent); opacity: 0.95; }
 
 /* keep anchor styling tied to the brand */
 a { color: var(--purple); text-decoration: none; }
