@@ -40,7 +40,12 @@
         <h3>Email us</h3>
         <p>The most direct way to reach the Spectrum Bridge team.</p>
         <a href="mailto:hellospectrumbridge.org@gmail.com" class="btn btn-primary">Email hellospectrumbridge.org@gmail.com</a>
-        <a href="https://t.me/Spectrumbridge" class="btn btn-secondary" target="_blank" rel="noopener">Message us on Telegram</a>
+        <a href="https://t.me/Spectrumbridge" class="btn btn-secondary tg-open" target="_blank" rel="noopener" aria-label="Open Spectrumbridge on Telegram (opens in new tab)">
+          <svg class="icon-telegram" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M21.6 3.4c-.2-.2-.5-.3-.8-.2L2.6 9.3c-.6.2-.6.9 0 1.1l4.1 1.3 1.6 5.1c.2.6.9.8 1.3.4l2.2-2.1 4.5 3.3c.5.4 1.1.1 1.2-.6l2-15.2c.1-.4-.1-.8-.5-1zM9.8 13.6L8.4 8.9 19 5.3 9.8 13.6z"/>
+          </svg>
+          Message us on Telegram
+        </a>
       </div>
 
       <p class="privacy-note">Spectrum Bridge does not collect or store personal information through this website. Any details you choose to share are sent directly to our team by email, and are handled with care and confidentiality.</p>
@@ -62,7 +67,12 @@
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="faq.html">FAQs</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://t.me/Spectrumbridge" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://t.me/Spectrumbridge" class="tg-open" target="_blank" rel="noopener" aria-label="Open Spectrumbridge on Telegram (opens in new tab)">
+          <svg class="icon-telegram" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M21.6 3.4c-.2-.2-.5-.3-.8-.2L2.6 9.3c-.6.2-.6.9 0 1.1l4.1 1.3 1.6 5.1c.2.6.9.8 1.3.4l2.2-2.1 4.5 3.3c.5.4 1.1.1 1.2-.6l2-15.2c.1-.4-.1-.8-.5-1zM9.8 13.6L8.4 8.9 19 5.3 9.8 13.6z"/>
+          </svg>
+          Telegram
+        </a></li>
       </ul>
     </div>
     <p class="footer-note">Spectrum Bridge — Global LGBTQ+ Network. This site shares information only; no personal details are collected here.</p>
@@ -78,6 +88,25 @@
       navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
+
+  (function(){
+    function openTelegram(event) {
+      var username = 'Spectrumbridge';
+      var tgUrl = 'tg://resolve?domain=' + username;
+      var webUrl = 'https://t.me/' + username;
+      // prevent default anchor navigation; we'll handle it
+      event.preventDefault();
+      // Try native app via custom protocol
+      window.location = tgUrl;
+      // fallback to web after a short delay
+      setTimeout(function(){ window.open(webUrl, '_blank', 'noopener'); }, 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      var els = document.querySelectorAll('.tg-open');
+      els.forEach(function(el){ el.addEventListener('click', openTelegram); });
+    });
+  })();
 </script>
 </body>
 </html>
