@@ -5,10 +5,12 @@
 :root {
   --bg: #FAFAF7;
   --bg-alt: #F2EEF9;
-  --ink: #14192E;
-  --ink-soft: #4B4F63;
-  --purple: #6B2C91;
-  --purple-deep: #4E1F6B;
+  /* typography colors (updated for stronger, catchier palette) */
+  --ink: #0F1724;        /* headings & primary text (deep navy) */
+  --ink-soft: #576076;   /* muted paragraph text */
+  --purple: #7B3CD9;     /* brand purple (links & accents) */
+  --purple-deep: #5A21A8;/* deeper purple for hovers */
+  --accent: #2AABEE;     /* telegram / accent blue */
   --coral: #E8562A;
   --line: #E1DCEC;
   --line-soft: #EAE6DC;
@@ -179,8 +181,9 @@ img { max-width: 100%; display: block; }
 
 .btn:hover { text-decoration: none; }
 
+/* primary buttons use brand purple now for a catchy look */
 .btn-primary {
-  background: var(--ink);
+  background: var(--purple);
   color: var(--white);
 }
 .btn-primary:hover { background: var(--purple-deep); }
@@ -213,8 +216,11 @@ img { max-width: 100%; display: block; }
   fill: currentColor;
 }
 
+/* Give telegram links the accent blue for immediate recognition */
+.tg-open .icon-telegram { color: var(--accent); }
+
 /* ensure icon looks good on primary buttons */
-.btn-primary .icon-telegram { filter: none; }
+.btn-primary .icon-telegram { filter: none; color: currentColor; }
 
 /* ---------- Hero ---------- */
 
