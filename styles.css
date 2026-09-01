@@ -434,7 +434,7 @@ section.block.alt {
   gap: 10px;
 }
 
-.footer-brand img { height: 26px; }
+.footer-brand img { height: 42px; }
 
 .footer-brand span {
   font-family: 'Space Grotesk', sans-serif;
@@ -498,4 +498,7 @@ section.block.alt {
     padding-top: 14px;
     margin-top: 4px;
   }
+
+  /* slightly smaller footer logo on narrow screens */
+  .footer-brand img { height: 30px; }
 }
